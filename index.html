@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zpherion | Anasayfa</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .left {
+            background-color: black;
+            color: white;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .right {
+            background-color: white;
+            width: 50%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            width: 80%;
+            text-align: center;
+            transition: background-color 0.5s;
+            cursor: pointer;
+        }
+        .section:hover {
+            background-color: #e0e0e0;
+        }
+        .projects, .discord, .minecraft {
+            animation: lightUp 2s infinite alternate;
+        }
+        @keyframes lightUp {
+            from {
+                background-color: #f0f0f0;
+            }
+            to {
+                background-color: #ffffff;
+            }
+        }
+        .projects {
+            background-image: url('deniz-arkaplan.jpg'); /* Projeler kısmı için deniz arkaplanı */
+            background-size: cover;
+        }
+        .minecraft {
+            background-image: url('minecraft-arkaplan.jpg'); /* Minecraft için özel arkaplan */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            <h1>LOGON</h1> <!-- Bu kısma kendi logonu ekleyebilirsin -->
+        </div>
+        <div class="right">
+            <div class="section projects" onclick="navigateTo('projeler.html')">
+                <h2>Projeler</h2>
+            </div>
+            <div class="section discord" onclick="navigateTo('discord.html')">
+                <h2>Discord</h2>
+            </div>
+            <div class="section minecraft" onclick="navigateTo('minecraft.html')">
+                <h2>Minecraft</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script> <!-- JavaScript dosyası -->
+</body>
+</html>
+ 
